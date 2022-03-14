@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<h1>Student Registeration Form</h1>
+<hr>
+<form id="form" action="process.php" method="post" autocomplete="on">
+
+    Firstname: <br>
+    <input type="text" id="name" name="firstname" placeholder="Firstname" required/>
+    Middlename: <br>
+    <input type="text" id="mname" name="middlename" placeholder="Middlename">
+    Lastname: <br>
+    <input type="text" id="lname" name="lastname" placeholder="Lastname">
+
+
+    Course:
+    <select name="course" required>
+        <option value="0" name="course" selected disabled>Course</option>
+        <option value="web-design" name="course">Web Design</option>
+        <option value="java" name="course">Java</option>
+        <option value="python" name="course">Python</option>
+        <option value="hacking" name="course">Hacking</option>
+    </select> <br>
+
+    Gender: <br>
+    <input type="radio" value="male" name="gender" checked>Male
+    <input type="radio" value="female" name="gender">Female
+    <input type="radio" value="other" name="gender">Other <br>
+
+    Phone: <br>
+    <input type="tel" placeholder="+93" >
+    <input type="tel" name="phone num" placeholder="phone no">
+
+    Current Address: <br>
+    <textarea name="current address" id="address" placeholder="Current Address" id="" cols="30" rows="5"></textarea>
+    Email: <br>
+    <input type="email" name="email" id="email" formnovalidate placeholder="Enter Email">
+    Password: <br>
+    <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            pattern="(?=(?:[^a-zA-Z]*[a-zA-Z]){5})(?=(?:\D*\d){2})(?=.*[@#$%&]).*"
+     />
+    Re-type password: <br>
+    <input
+            type="password"
+            placeholder="Retype Password"
+            pattern="(?=(?:[^a-zA-Z]*[a-zA-Z]){5})(?=(?:\D*\d){2})(?=.*[@#$%&]).*"
+    />
+    <input type="submit" id="register" name="register" value="Register" />
+</form>
+</body>
+</html>
